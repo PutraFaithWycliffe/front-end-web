@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function scope</title>
+  </head>
+  <body>
+    <script>
+      // arrow function
+      const arrowFunction = () => {
+        let z = 30; // z hanya dapat diakses dalam fungsi
+        console.log('Nilai z:', z); // output: 30
+      };
+
+      // call function
+      arrowFunction();
+
+      // z tidak dapat diakses di luar function
+      console.log('Nilai z diluar function:', z); //error
+    </script>
+  </body>
+</html>

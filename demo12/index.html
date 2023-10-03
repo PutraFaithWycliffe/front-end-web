@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      if (true) {
+        let x = 10; // hanya dapat di akses dalam blok ini
+        const y = 20; // y juga
+        console.log('Nilai x:', x); //output : 10
+        console.log('Nilai y:', y); // output : 20
+      }
+
+      // x dan y tidak dapat diakses diluar blok
+      console.log('Nilai x di luar blok:', x); // error
+    </script>
+  </body>
+</html>

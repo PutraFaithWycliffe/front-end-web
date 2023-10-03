@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global scope</title>
+  </head>
+  <body>
+    <script>
+      // variable ini dapat diakses dari mana saja
+      const globalVar = 50;
+
+      //function
+      function globalFunction() {
+        console.log(globalVar);
+      }
+
+      //call function
+      globalFunction(); // output: 50
+    </script>
+  </body>
+</html>

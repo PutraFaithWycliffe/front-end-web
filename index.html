@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // create class
+      class Calculator {
+        constructor(myName) {
+          this.studentName = myName;
+        }
+
+        // display nama student
+        printStudent() {
+          return 'My name is ' + this.studentName;
+        }
+
+        // penjumlahan
+        add(a, b) {
+          return a + b;
+        }
+
+        // pengurangan
+        subtract(a, b) {
+          return a - b;
+        }
+
+        // perkalian
+        multiply(a, b) {
+          return a * b;
+        }
+
+        //pembagian
+        devide(a, b) {
+          return a / b;
+        }
+      }
+
+      // create object of class
+      const myCal = new Calculator('<strong>Putra Lombu<strong');
+      document.write('<p>Me: ' + myCal.printStudent() + '</p>');
+
+      // create a function
+      function calculate(a, b) {
+        const add = myCal.add(a, b);
+        const subtract = myCal.subtract(a, b);
+        const multiply = myCal.multiply(a, b);
+        const devide = myCal.devide(a, b);
+
+        return [add, subtract, multiply, devide];
+      }
+
+      // ES6 Destructuring (new way of assigning values to variables)
+      const [add, subtract, multiply, devide] = calculate(5, 10);
+
+      // display in browser
+      document.write('<p>Sum: ' + add + '</p>');
+      document.write('<p>Difference: ' + subtract + '</p>');
+      document.write('<p>Product    : ' + multiply + '</p>');
+      document.write('<p>Division: ' + devide + '</p>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Menyimpan dan mengambil data dari local storage.</h2>
+    <hr />
+    <p id="txt-name"></p>
+    <p id="txt-age"></p>
+    <p id="txt-city"></p>
+
+    <script>
+      // storage data:
+      const myObj = { name: 'Semmy Wellem Taju', age: '33', city: 'Manado City' };
+      const myJSON = JSON.stringify(myObj);
+      localStorage.setItem('testJSON', myJSON);
+
+      //print console
+      console.log(myJSON);
+
+      //Retrieve data:
+      let text = localStorage.getItem('testJSON');
+      let obj = JSON.parse(text);
+      document.getElementById('txt-name').innerHTML = 'My name is ' + obj.name;
+      document.getElementById('txt-age').innerHTML = 'I am ' + obj.age + ' Years old.';
+      document.getElementById('txt-city').innerHTML = ' I live in ' + obj.city + '.';
+    </script>
+  </body>
+</html>

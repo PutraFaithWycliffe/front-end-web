@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function scope using var</title>
+  </head>
+  <body>
+    <script>
+      function exampleFunction() {
+        var a = 5; // a hanya dapat diakses dalam fungsi
+        console.log('Nilai a:', a); //output: 5
+      }
+
+      // call function
+      exampleFunction();
+
+      // a tidak dapat diakses diluar fungsi
+      console.log('Nilai a diluar fungsi:', a); // error
+    </script>
+  </body>
+</html>
